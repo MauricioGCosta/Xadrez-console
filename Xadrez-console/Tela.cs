@@ -15,6 +15,9 @@ namespace Xadrez_console
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
             Console.WriteLine("Aguardando jogada " + partida.jogadorAtual);
+
+            if (partida.xeque)
+                Console.WriteLine("Xeque!");
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
@@ -23,8 +26,12 @@ namespace Xadrez_console
             Console.Write("Brancas: ");
             imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
             Console.WriteLine();
+
+            ConsoleColor aux = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("Pretas: ");
             imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
+            Console.ForegroundColor = aux;
             Console.WriteLine();
         }
 
