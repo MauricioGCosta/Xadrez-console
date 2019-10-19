@@ -57,11 +57,11 @@ namespace Xadrez_console
 
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
-            Console.WriteLine();
+            Console.WriteLine(" ");
 
             for (int i = 0; i < tab.linhas; i++)
             {
-                Console.Write(8 - i + " ");
+                Console.Write(8 - i + "  ");
 
                 for (int j = 0; j < tab.colunas; j++)
                 {
@@ -69,6 +69,8 @@ namespace Xadrez_console
                 }
                 Console.WriteLine();
             }
+
+            Console.WriteLine();
             Console.WriteLine("  a b c d e f g h");
             Console.WriteLine();
         }
